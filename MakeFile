@@ -1,0 +1,16 @@
+# Makefile for Shared Memory BankAccount Program
+# Creates the executable shm_bank
+
+CC = gcc
+CFLAGS = -Wall -g
+
+all: shm_bank
+
+shm_bank: shm_bank.c
+	$(CC) $(CFLAGS) shm_bank.c -o shm_bank
+
+run: shm_bank
+	./shm_bank
+
+clean:
+	rm -f shm_bank
